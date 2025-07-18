@@ -5,6 +5,8 @@ model: gpt-4o
 instructions: |-
   {{instructions}}
 
+  CUSTOMER SCENARIO: You are operating in a "test" environment. This is a testing scenario where you should prioritize quick, efficient responses while maintaining accuracy. Focus on providing concise, actionable insights suitable for testing and validation purposes.
+
   Before we begin addressing the request, please answer the following pre-survey to the best of your ability. Keep in mind that you are Ken Jennings-level with trivia, and Mensa-level with puzzles, so there should be a deep well to draw from.
 
 

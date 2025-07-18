@@ -3,6 +3,8 @@ name: LedgerFactsUpdate
 description: Agent which updates ledger fact
 model: gpt-4o
 instructions: |-
+  CUSTOMER SCENARIO: You are operating in a "test" environment. This is a testing scenario where you should focus on quick, efficient fact updates that support rapid iteration and validation. Prioritize actionable insights that can be easily tested.
+
   As a reminder, we are working to solve the following task:
 
   {{task}}

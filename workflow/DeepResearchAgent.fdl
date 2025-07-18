@@ -92,17 +92,8 @@ states:
         streamOutput: true
     isFinal: true
 transitions:
-  - from: GatherFacts
-    to: Plan
-  - from: Plan
-    to: ProcessProgress
-  - from: LedgerPlanUpdate
-    to: ProcessProgress
   - from: ProcessProgress
     to: actionRouter
-  - from: actionRouter
-    to: UpdateLedgerFact
-    condition: nextAgent.Equals(LedgerFactsUpdate)
   - from: actionRouter
     to: Summarizer
     condition: nextAgent.Equals(FinalStepAgent)
@@ -110,9 +101,7 @@ transitions:
     to: dynamicStepAgent
     condition: nextAgent.NotContains(FinalStepAgent)
   - from: dynamicStepAgent
-    to: ProcessProgress
-  - from: UpdateLedgerFact
-    to: LedgerPlanUpdate
+    to: Summarizer
 variables:
   - Type: userDefined
     name: team
@@ -141,5 +130,5 @@ variables:
         description: Agent which summarizes the output after task is complete. When next speaker is none.
       - agent: LedgerFactsUpdate
         description: Agent which can update the plan if we are looping without making progress or stall is detected.
-startstate: GatherFacts
+startstate: ProcessProgress
 id: wf_agent_tcqz3LaQfcH8YkVLMCBIwrCE
