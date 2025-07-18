@@ -1,6 +1,6 @@
-# 🧠 ResearchFlow Agent
+# 🧠 Qualcomm ResearchFlow Agent
 
-This code sample helps create agents that orchestrate complex, multi-step research workflows, helping users gather, synthesize, and structure knowledge from complex sources. Ideal for analysts, strategists, product teams, and technical writers.
+This customized agent template helps Qualcomm create specialized research workflows for semiconductor industry analysis, competitive intelligence, and manufacturing insights. Designed specifically for SemiAnalysis-like research capabilities in the manufacturing sector.
 
 **IMPORTANT NOTE:** Starter templates, instructions, code samples and resources in this msft-agent-samples file (“samples”) are designed to assist in accelerating development of agents for specific scenarios. It is important that you review all provided resources and carefully test Agent behavior in the context of your use case: ([Learn More](https://learn.microsoft.com/en-us/legal/cognitive-services/agents/transparency-note?context=%2Fazure%2Fai-services%2Fagents%2Fcontext%2Fcontext)). 
 
@@ -8,18 +8,18 @@ Certain Agent offerings may be subject to legal and regulatory requirements, may
 
 ---
 
-## 💼 Use Cases
+## 💼 Qualcomm Use Cases
 
-- **Market & Competitive Research**: Automate the collection and summarization of publicly available competitive data, or your own competitive data, trends, and product insights.
-- **Technical Literature Review**: Extract structured summaries from technical documents and API documentation.
-- **Customer Deep Dives**: Combine customer feedback, CRM notes, and meeting transcripts into coherent insight packs.
-- **Strategic Briefing Packs**: Generate polished summaries, outlines, and visual insights for leadership-ready deliverables.
+- **Semiconductor Market Analysis**: Automate collection and analysis of semiconductor industry trends, competitive positioning, and technology roadmaps.
+- **Manufacturing Intelligence**: Extract insights from manufacturing process documentation, supply chain data, and production metrics.
+- **Technology Competitive Research**: Analyze competitor chip architectures, performance benchmarks, and patent landscapes.
+- **Executive Briefing Packs**: Generate leadership-ready summaries of semiconductor market dynamics, manufacturing opportunities, and strategic recommendations.
 
 ---
 
 - ## 🧩 Tools & Capabilities
 
-Built with **Azure AI Agent Service**, the ResearchFlow agent coordinates a graph of specialized agents to conduct structured research and synthesis tasks:
+Built with **Azure AI Agent Service**, the Qualcomm ResearchFlow agent coordinates specialized agents optimized for semiconductor industry research and manufacturing intelligence:
 
 - **Planner Agent (`LedgerPlanner.agent`)** breaks down complex prompts into logical subtasks for targeted execution.
 - **Summarizer Agent (`Summarizer.agent`)** condenses technical or lengthy content into clear summaries tailored to user intent.
@@ -54,32 +54,39 @@ All tools and agents are declaratively configured in `.agent` and `.fdl` files.
 
 ## 💬 Example Agent Interactions
 
-**User**: Can you generate a competitive landscape analysis on cloud-native agent orchestration tools?  
-**📥 Agent Response**: Planner routes task to summarizer + file search, returning a 3-part overview (market size, players, differentiators)
+**User**: Can you generate a competitive landscape analysis on 5G chipset manufacturers and their market positioning?  
+**📥 Agent Response**: Planner routes task to semiconductor-focused research agents, returning comprehensive analysis of market share, technology differentiation, and manufacturing capabilities.
 
 ---
 
-**User**: I uploaded three analyst reports—can you extract the trends relevant to SMB adoption and turn it into a leadership summary?  
-**📄 Agent Response**: File Search → Summarizer → Final summary document with key stats, quotes, and predictions.
+**User**: I uploaded three semiconductor industry reports—can you extract manufacturing trends and create an executive summary for Qualcomm leadership?  
+**📄 Agent Response**: Manufacturing Intelligence → Industry Analysis → Executive summary with key manufacturing insights, market opportunities, and strategic recommendations.
 
 ---
 
-**User**: What's the breakdown of feature gaps between our platform and Company X?  
-**📊 Agent Response**: File Search identifies platform docs; Summarizer creates comparative feature tables.
+**User**: What's the technology gap analysis between Qualcomm's latest Snapdragon and competitor offerings?  
+**📊 Agent Response**: Competitive Research identifies technical specifications; Analysis creates detailed performance comparison tables and strategic positioning insights.
 
 ---
 
-**User**: I'm prepping a 2-minute pitch—summarize these 10 pages of product reviews into themes I can speak to.  
-**🧠 Agent Response**: Sentiment clustering and summarization into 3 key talking points with example quotes.
+**User**: I need a 5-minute briefing on emerging semiconductor manufacturing technologies—summarize these technical papers into key talking points.  
+**🧠 Agent Response**: Technical analysis and synthesis into 4 key manufacturing innovation themes with supporting data and industry implications.
 
 ---
 
-## 🛠 Customization Tips
+## 🛠 Qualcomm Customization Features
 
-- **Add Custom Tools**: Plug in web search or vector DB search to complement file-based knowledge.
-- **Tune Agent Routing**: Adjust the planner or agentRouter logic to improve task delegation.
-- **Control Summarization Style**: Modify the summarizer agent’s system prompt for narrative, factual, or bullet-style summaries.
-- **Export as Report or Slide Deck**: Add downstream tools that turn outputs into formatted PDFs or PowerPoint slides.
+- **Semiconductor Industry Focus**: All agents optimized for semiconductor research, manufacturing analysis, and competitive intelligence.
+- **SemiAnalysis-Style Insights**: Specialized prompts for deep technical analysis and market intelligence similar to leading semiconductor research firms.
+- **Manufacturing Intelligence**: Enhanced capabilities for supply chain analysis, production metrics, and manufacturing process insights.
+- **Qualcomm Branding**: Template configured with Qualcomm brand theme and primary color (#3b82f6) for future UI integration.
+
+## 🔧 Deployment Configuration
+
+- **Mode**: Configured for oneshot execution
+- **MCP Tools**: Disabled as per Qualcomm requirements
+- **A2A (Agent-to-Agent)**: Disabled for simplified workflow
+- **Industry**: Manufacturing sector optimization
 
 ---
 

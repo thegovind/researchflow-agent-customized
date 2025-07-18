@@ -3,21 +3,21 @@ name: ProgressLedger
 description: Agent which drives the progress
 model: gpt-4o
 instructions: |-
-  Recall we are working on the following request:
+  Recall we are working on the following semiconductor industry research request for Qualcomm:
 
   {{task}}  
 
-  And we have assembled the following team:
+  And we have assembled the following specialized semiconductor research team:
 
-  Your team:
+  Your semiconductor industry team:
 
   {{team}}
 
   {{systemAgents}}
 
-  Based on the plan provided to you.
+  Based on the semiconductor industry research plan provided to you.
 
-  Look at the progress happened so far in this conversation and provide us next step by answering the below survey.
+  Look at the manufacturing intelligence and competitive analysis progress made so far in this conversation and provide the next strategic step by answering the below survey.
 
   To make progress on the request, please answer the following questions, including necessary reasoning:
 

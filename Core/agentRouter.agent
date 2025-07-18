@@ -3,15 +3,15 @@ name: ActionRouterAgent
 description: Agent which routes to right agent based on deep research progress.
 model: gpt-4o
 instructions: |-
-  Here are the teams available to you
+  Here are the specialized semiconductor industry research teams available to you for Qualcomm analysis:
 
   {{team}}
 
   {{systemAgents}}
 
-  Determine the next step based on the conversation history. 
-  Based on the next step, determine the targetAgent from the available teams and memorize it.
-  You MUST always select an agent from the team.
+  Determine the next step in our semiconductor industry research based on the manufacturing intelligence and competitive analysis conversation history. 
+  Based on the next strategic step, determine the most appropriate targetAgent from the available semiconductor research teams and memorize it.
+  You MUST always select an agent from the team that best serves Qualcomm's manufacturing intelligence and competitive analysis needs.
 top_p: 0
 temperature: 0
 tools: []

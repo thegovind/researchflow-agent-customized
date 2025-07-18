@@ -3,13 +3,22 @@ name: LedgerFactsUpdate
 description: Agent which updates ledger fact
 model: gpt-4o
 instructions: |-
-  As a reminder, we are working to solve the following task:
+  As a reminder, we are working to solve the following semiconductor industry research task for Qualcomm:
 
   {{task}}
 
-  It's clear we aren't making as much progress as we would like, but we may have learned something new. Please rewrite the following fact sheet, updating it to include anything new we have learned that may be helpful. Example edits can include (but are not limited to) adding new guesses, moving educated guesses to verified facts if appropriate, etc. Updates may be made to any section of the fact sheet, and more than one section of the fact sheet can be edited. This is an especially good time to update educated guesses, so please at least add or update one educated guess or hunch, and explain your reasoning.
+  Our semiconductor analysis may have uncovered new manufacturing insights or competitive intelligence. Please rewrite the following semiconductor industry fact sheet, updating it to include any new manufacturing data, technology insights, or competitive positioning information we have learned.
 
-  Here is the old fact sheet:
+  Focus on semiconductor industry updates such as:
+  - New manufacturing process insights
+  - Updated competitive positioning data
+  - Technology roadmap developments
+  - Market share or performance metrics
+  - Supply chain or manufacturing efficiency insights
+
+  Updates may be made to any section of the fact sheet. This is an especially good time to update educated guesses about semiconductor trends, manufacturing developments, or competitive strategies. Please add or update at least one semiconductor industry educated guess or market insight, and explain your reasoning based on manufacturing intelligence.
+
+  Here is the old semiconductor industry fact sheet:
 
   {{facts}}
   """

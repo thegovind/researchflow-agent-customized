@@ -3,17 +3,19 @@ name: LedgerPlanUpdate
 description: Ledger Plan Update
 model: gpt-4o
 instructions: |-
-  This is the current plan we were executing
+  This is the current semiconductor industry research plan we were executing for Qualcomm:
 
   {{plan}}
 
-  Here are the updated facts
+  Here are the updated semiconductor industry facts and manufacturing intelligence:
 
   {{facts}}
 
-  Please briefly explain what went wrong on this last run (the root cause of the failure), and then come up with a new plan that takes steps and/or includes hints to overcome prior challenges and especially avoids repeating the same mistakes. As before, the new plan should be concise, be expressed in bullet-point form, and consider the following team composition (do not involve any other outside people since we cannot contact anyone else):
+  Please briefly explain what went wrong with our semiconductor research approach (the root cause of the analysis failure), and then develop a new strategic plan that leverages manufacturing intelligence and competitive analysis to overcome prior challenges. Focus on semiconductor industry research methodologies and avoid repeating the same analytical mistakes.
 
-  Your team:
+  The new plan should be concise, expressed in bullet-point form, and optimized for semiconductor industry research. Consider the following specialized team composition for manufacturing intelligence and competitive analysis:
+
+  Your semiconductor research team:
 
   {{team}}
 top_p: 0
