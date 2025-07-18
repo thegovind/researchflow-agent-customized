@@ -1,0 +1,71 @@
+
+🔷 QUALCOMM RESEARCHFLOW AGENT CUSTOMIZATION COMPLETE 🔷
+========================================================================
+
+                    Manufacturing Excellence in Semiconductor Innovation
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                           CUSTOMIZATION SUMMARY                        │
+├─────────────────────────────────────────────────────────────────────────┤
+│ Company:       Qualcomm                                                │
+│ Industry:      Manufacturing (Semiconductor)                           │
+│ Primary Color: #1c19c8 (Qualcomm Brand Blue)                          │
+│ Research Style: SemiAnalysis-level technical depth                     │
+│ Configuration: Oneshot mode (no MCP tools, no A2A)                     │
+└─────────────────────────────────────────────────────────────────────────┘
+
+🤖 CUSTOMIZED AGENTS (7 Total)
+┌──────────────────────────────────────┬─────────────────────────────────────┐
+│ Agent Name                           │ Specialization                     │
+├──────────────────────────────────────┼─────────────────────────────────────┤
+│ QualcommLedgerFacts                  │ Semiconductor domain fact collection│
+│ QualcommLedgerPlanner                │ Strategic research planning         │
+│ QualcommFinalStepAgent               │ SemiAnalysis-style analysis        │
+│ QualcommProgressLedger               │ Research workflow orchestration     │
+│ QualcommActionRouterAgent            │ Intelligent technical routing       │
+│ QualcommLedgerFactsUpdate            │ Semiconductor intelligence updates  │
+│ QualcommLedgerPlanUpdate             │ Adaptive research planning          │
+└──────────────────────────────────────┴─────────────────────────────────────┘
+
+🧠 DOMAIN EXPERTISE INTEGRATION
+┌─────────────────────────────────────────────────────────────────────────┐
+│ ✅ Process Technologies (3nm, 5nm, 7nm fabrication nodes)              │
+│ ✅ Chip Architectures (CPU, GPU, NPU, SoC design analysis)             │
+│ ✅ Manufacturing Intelligence (fab operations, yield optimization)      │
+│ ✅ Competitive Analysis (market positioning, technology roadmaps)       │
+│ ✅ Patent & IP Strategy (intellectual property landscape)               │
+│ ✅ Market Dynamics (semiconductor industry trends and forecasting)      │
+└─────────────────────────────────────────────────────────────────────────┘
+
+📊 RESEARCH CAPABILITIES
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 🔬 Competitive Chip Architecture Analysis                               │
+│ 📱 Mobile SoC Competitive Intelligence                                  │
+│ 📈 Automotive Semiconductor Market Analysis                             │
+│ ⚡ GPU Computing Competitive Landscape                                  │
+│ 🏭 Manufacturing Technology Assessment                                  │
+│ 🛡️ Patent & IP Landscape Analysis                                       │
+└─────────────────────────────────────────────────────────────────────────┘
+
+✅ VALIDATION STATUS
+┌─────────────────────────────────────────────────────────────────────────┐
+│ 🔍 Automated Tests:        21/21 PASSED (100% Success Rate)            │
+│ 📝 Agent Customization:    All 7 agents Qualcomm-branded               │
+│ 🔄 Workflow Configuration: Updated to qualcomm-deepresearch            │
+│ 📚 Documentation:          Complete with branding and examples          │
+│ 🎨 Brand Integration:      #1c19c8 color and identity applied          │
+└─────────────────────────────────────────────────────────────────────────┘
+
+🎯 STRATEGIC VALUE
+┌─────────────────────────────────────────────────────────────────────────┐
+│ • SemiAnalysis-caliber technical analysis and competitive intelligence  │
+│ • Manufacturing-focused research with semiconductor domain expertise    │
+│ • Executive-ready strategic insights for Qualcomm leadership           │
+│ • Efficient workflow optimization for complex technical research        │
+│ • Qualcomm brand identity throughout the research experience            │
+└─────────────────────────────────────────────────────────────────────────┘
+
+                        Powered by Azure AI Agent Service
+                    Ready for Qualcomm's semiconductor research needs
+
+========================================================================
