@@ -1,6 +1,6 @@
 # AI Foundry Agent Definition
 name: ActionRouterAgent
-description: Agent which routes to right agent based on deep research progress.
+description: Manufacturing research routing agent that directs workflow to appropriate specialists based on deep manufacturing industry research progress.
 model: gpt-4o
 instructions: |-
   Here are the teams available to you

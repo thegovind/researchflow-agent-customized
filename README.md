@@ -1,6 +1,8 @@
-# 🧠 ResearchFlow Agent
+# 🧠 Qualcomm Manufacturing ResearchFlow Agent
 
-This code sample helps create agents that orchestrate complex, multi-step research workflows, helping users gather, synthesize, and structure knowledge from complex sources. Ideal for analysts, strategists, product teams, and technical writers.
+This customized ResearchFlow Agent template is specifically designed for Qualcomm's manufacturing industry research needs. It orchestrates complex, multi-step research workflows to gather, synthesize, and structure knowledge from manufacturing, semiconductor, and competitive intelligence sources. Optimized for deep research capabilities similar to SemiAnalysis, this agent is ideal for manufacturing analysts, competitive intelligence teams, and technical research professionals.
+
+**Brand Theme**: Qualcomm brand colors with primary color #1c19c8 for future UI implementations.
 
 **IMPORTANT NOTE:** Starter templates, instructions, code samples and resources in this msft-agent-samples file (“samples”) are designed to assist in accelerating development of agents for specific scenarios. It is important that you review all provided resources and carefully test Agent behavior in the context of your use case: ([Learn More](https://learn.microsoft.com/en-us/legal/cognitive-services/agents/transparency-note?context=%2Fazure%2Fai-services%2Fagents%2Fcontext%2Fcontext)). 
 
@@ -8,18 +10,19 @@ Certain Agent offerings may be subject to legal and regulatory requirements, may
 
 ---
 
-## 💼 Use Cases
+## 💼 Manufacturing Industry Use Cases
 
-- **Market & Competitive Research**: Automate the collection and summarization of publicly available competitive data, or your own competitive data, trends, and product insights.
-- **Technical Literature Review**: Extract structured summaries from technical documents and API documentation.
-- **Customer Deep Dives**: Combine customer feedback, CRM notes, and meeting transcripts into coherent insight packs.
-- **Strategic Briefing Packs**: Generate polished summaries, outlines, and visual insights for leadership-ready deliverables.
+- **Semiconductor Competitive Analysis**: Automate deep research and analysis of semiconductor market trends, competitor capabilities, and technology roadmaps similar to SemiAnalysis methodologies.
+- **Manufacturing Process Intelligence**: Extract structured insights from technical manufacturing documents, process specifications, and industry reports.
+- **Supply Chain Research**: Analyze supply chain dynamics, vendor capabilities, and manufacturing capacity across the semiconductor ecosystem.
+- **Technology Landscape Mapping**: Generate comprehensive competitive intelligence reports on emerging manufacturing technologies and industry developments.
+- **Strategic Manufacturing Briefings**: Create leadership-ready deliverables with deep technical analysis and manufacturing industry insights.
 
 ---
 
 - ## 🧩 Tools & Capabilities
 
-Built with **Azure AI Agent Service**, the ResearchFlow agent coordinates a graph of specialized agents to conduct structured research and synthesis tasks:
+Built with **Azure AI Agent Service**, this Qualcomm-customized ResearchFlow agent coordinates a graph of specialized agents to conduct deep manufacturing industry research and synthesis tasks:
 
 - **Planner Agent (`LedgerPlanner.agent`)** breaks down complex prompts into logical subtasks for targeted execution.
 - **Summarizer Agent (`Summarizer.agent`)** condenses technical or lengthy content into clear summaries tailored to user intent.
