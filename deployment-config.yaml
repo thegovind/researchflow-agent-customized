@@ -1,0 +1,87 @@
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: qualcomm-semianalysis-config
+  namespace: azure-ai-agents
+data:
+  company.name: "Qualcomm"
+  company.industry: "manufacturing"
+  company.sector: "semiconductor"
+  company.use_case: "SemiAnalysis"
+  
+  branding.theme: "Qualcomm"
+  branding.primary_color: "#0d3677"
+  branding.tone: "professional_technical"
+  
+  technical.use_mcp_tools: "true"
+  technical.use_a2a: "true"
+  technical.mode: "oneshot"
+  technical.agent_orchestration: "connected_agents"
+  
+  research.focus: |
+    - semiconductor_market_analysis
+    - manufacturing_process_innovation
+    - competitive_intelligence
+    - technology_roadmaps
+    - supply_chain_analysis
+    - patent_landscape_analysis
+  
+  mcp.github_integration: "true"
+  mcp.web_search: "true"
+  mcp.patent_database: "true"
+  mcp.industry_reports: "true"
+  
+  a2a.connected_agents: "true"
+  a2a.multi_agent_workflows: "true"
+  a2a.workflow_orchestration: "true"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qualcomm-researchflow-agent
+  namespace: azure-ai-agents
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: qualcomm-researchflow-agent
+  template:
+    metadata:
+      labels:
+        app: qualcomm-researchflow-agent
+    spec:
+      containers:
+      - name: researchflow-agent
+        image: azure-ai-agents/researchflow:latest
+        env:
+        - name: COMPANY_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: qualcomm-semianalysis-config
+              key: company.name
+        - name: PRIMARY_COLOR
+          valueFrom:
+            configMapKeyRef:
+              name: qualcomm-semianalysis-config
+              key: branding.primary_color
+        - name: USE_MCP_TOOLS
+          valueFrom:
+            configMapKeyRef:
+              name: qualcomm-semianalysis-config
+              key: technical.use_mcp_tools
+        - name: USE_A2A
+          valueFrom:
+            configMapKeyRef:
+              name: qualcomm-semianalysis-config
+              key: technical.use_a2a
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"

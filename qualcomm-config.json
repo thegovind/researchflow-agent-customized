@@ -1,0 +1,73 @@
+{
+  "company": {
+    "name": "Qualcomm",
+    "industry": "manufacturing",
+    "sector": "semiconductor",
+    "primary_use_case": "SemiAnalysis"
+  },
+  "branding": {
+    "theme": "Qualcomm",
+    "primary_color": "#0d3677",
+    "tone": "professional_technical",
+    "visual_elements": {
+      "logo_usage": "Qualcomm corporate branding standards",
+      "color_palette": {
+        "primary": "#0d3677",
+        "secondary": "#00a0df",
+        "accent": "#f7941d",
+        "neutral": "#666666"
+      }
+    }
+  },
+  "technical_configuration": {
+    "use_mcp_tools": true,
+    "use_a2a": true,
+    "mode": "oneshot",
+    "agent_orchestration": "connected_agents",
+    "workflow_type": "multi_step_research"
+  },
+  "research_focus": [
+    "semiconductor_market_analysis",
+    "manufacturing_process_innovation",
+    "competitive_intelligence",
+    "technology_roadmaps",
+    "supply_chain_analysis",
+    "patent_landscape_analysis",
+    "foundry_ecosystem_mapping",
+    "process_node_advancement",
+    "packaging_technology_trends",
+    "automotive_semiconductor_trends"
+  ],
+  "data_sources": {
+    "industry_reports": [
+      "IC Insights",
+      "Gartner Semiconductor",
+      "IDC Semiconductor",
+      "SEMI Market Intelligence"
+    ],
+    "technical_publications": [
+      "IEEE Journals",
+      "ISSCC Proceedings",
+      "VLSI Symposium",
+      "IEDM Conference"
+    ],
+    "patent_databases": [
+      "USPTO",
+      "WIPO",
+      "EPO",
+      "Patent Analytics Platforms"
+    ],
+    "financial_sources": [
+      "SEC Filings",
+      "Annual Reports",
+      "Quarterly Earnings",
+      "Industry Financial Analysis"
+    ]
+  },
+  "output_formats": {
+    "executive_summary": "C-level strategic briefing format",
+    "technical_briefing": "Engineering team detailed analysis",
+    "competitive_analysis": "Market positioning and threat assessment",
+    "research_report": "Comprehensive industry analysis"
+  }
+}
