@@ -1,6 +1,18 @@
 # AI Foundry Definition Language
 name: deepresearch
 states:
+  - name: InitializeResearch
+    actors:
+      - agent: ResearchFlow
+        inputs:
+          instructions: instructions
+          research_query: task
+        outputs:
+          research_context: research_context
+        thread: Planning
+        humanInLoopMode: never
+        streamOutput: true
+    isFinal: false
   - name: GatherFacts
     actors:
       - agent: LedgerFacts
@@ -92,6 +104,8 @@ states:
         streamOutput: true
     isFinal: true
 transitions:
+  - from: InitializeResearch
+    to: GatherFacts
   - from: GatherFacts
     to: Plan
   - from: Plan
@@ -124,6 +138,9 @@ variables:
     name: facts
   - Type: userDefined
     name: plan
+  - Type: userDefined
+    name: research_context
+    description: Qualcomm SemiAnalysis research context and focus areas
   - Type: messages
     name: plannerMessages
   - Type: thread
@@ -138,8 +155,10 @@ variables:
     name: systemAgents
     value:
       - agent: FinalStepAgent
-        description: Agent which summarizes the output after task is complete. When next speaker is none.
+        description: Qualcomm SemiAnalysis summarizer for executive and technical briefings
       - agent: LedgerFactsUpdate
-        description: Agent which can update the plan if we are looping without making progress or stall is detected.
-startstate: GatherFacts
+        description: Agent which can update semiconductor research facts and analysis
+      - agent: ResearchFlow
+        description: Main Qualcomm SemiAnalysis orchestration agent for semiconductor research workflows
+startstate: InitializeResearch
 id: wf_agent_tcqz3LaQfcH8YkVLMCBIwrCE
