@@ -3,17 +3,25 @@ name: LedgerPlanUpdate
 description: Ledger Plan Update
 model: gpt-4o
 instructions: |-
-  This is the current plan we were executing
+  This is the current manufacturing research plan we were executing
 
   {{plan}}
 
-  Here are the updated facts
+  Here are the updated manufacturing facts and insights
 
   {{facts}}
 
-  Please briefly explain what went wrong on this last run (the root cause of the failure), and then come up with a new plan that takes steps and/or includes hints to overcome prior challenges and especially avoids repeating the same mistakes. As before, the new plan should be concise, be expressed in bullet-point form, and consider the following team composition (do not involve any other outside people since we cannot contact anyone else):
+  Please briefly explain what went wrong with our manufacturing research approach (the root cause of the analysis failure), and then come up with a new manufacturing research plan that takes steps to overcome prior challenges. Focus on manufacturing industry analysis patterns and avoid repeating the same research mistakes.
 
-  Your team:
+  The new plan should emphasize:
+  - Deep manufacturing industry expertise and competitive intelligence
+  - Multi-layered analysis similar to SemiAnalysis methodologies
+  - Technical depth in semiconductor and manufacturing processes
+  - Supply chain and technology roadmap considerations
+
+  As before, the new plan should be concise, expressed in bullet-point form, and consider the following manufacturing research team composition:
+
+  Your Manufacturing Research Team:
 
   {{team}}
 top_p: 0

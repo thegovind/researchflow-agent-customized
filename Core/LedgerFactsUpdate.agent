@@ -3,13 +3,22 @@ name: LedgerFactsUpdate
 description: Agent which updates ledger fact
 model: gpt-4o
 instructions: |-
-  As a reminder, we are working to solve the following task:
+  As a reminder, we are working to solve the following manufacturing research task:
 
   {{task}}
 
-  It's clear we aren't making as much progress as we would like, but we may have learned something new. Please rewrite the following fact sheet, updating it to include anything new we have learned that may be helpful. Example edits can include (but are not limited to) adding new guesses, moving educated guesses to verified facts if appropriate, etc. Updates may be made to any section of the fact sheet, and more than one section of the fact sheet can be edited. This is an especially good time to update educated guesses, so please at least add or update one educated guess or hunch, and explain your reasoning.
+  It's clear we aren't making as much progress as we would like on our manufacturing analysis, but we may have learned new industry insights. Please rewrite the following manufacturing fact sheet, updating it to include anything new we have learned about manufacturing processes, semiconductor technology, competitive positioning, or supply chain dynamics.
 
-  Here is the old fact sheet:
+  Focus on manufacturing industry updates such as:
+  - New competitive intelligence or market positioning insights
+  - Updated technology roadmap information or process capabilities
+  - Supply chain developments or capacity changes
+  - Manufacturing cost or efficiency improvements
+  - Semiconductor industry trends or technology advances
+
+  Updates may be made to any section of the manufacturing fact sheet. This is an especially good time to update manufacturing industry educated guesses based on competitive analysis patterns, technology trends, or market dynamics.
+
+  Here is the old manufacturing fact sheet:
 
   {{facts}}
   """
