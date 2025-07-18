@@ -1,5 +1,5 @@
 # AI Foundry Definition Language
-name: deepresearch
+name: qualcomm-semiconductor-research
 states:
   - name: GatherFacts
     actors:
