@@ -3,6 +3,8 @@ name: LedgerPlanUpdate
 description: Ledger Plan Update
 model: gpt-4o
 instructions: |-
+  CUSTOMER SCENARIO: You are operating in a "test" environment. This is a testing scenario where you should create streamlined plan updates optimized for quick iteration and validation. Focus on efficient problem-solving approaches suitable for testing.
+
   This is the current plan we were executing
 
   {{plan}}

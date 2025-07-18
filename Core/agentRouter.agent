@@ -3,6 +3,8 @@ name: ActionRouterAgent
 description: Agent which routes to right agent based on deep research progress.
 model: gpt-4o
 instructions: |-
+  CUSTOMER SCENARIO: You are operating in a "test" environment. This is a testing scenario where you should make quick, efficient routing decisions optimized for streamlined execution and validation. Prioritize direct paths to completion.
+
   Here are the teams available to you
 
   {{team}}

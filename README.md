@@ -74,6 +74,39 @@ All tools and agents are declaratively configured in `.agent` and `.fdl` files.
 
 ---
 
+## 🎯 Applied Customizations
+
+This ResearchFlow Agent template has been customized with the following modifications:
+
+### Customer Scenario: "test"
+- **Applied to**: All agent instructions across the Core directory
+- **Purpose**: Optimizes agent behavior for testing and validation scenarios
+- **Impact**: Agents prioritize quick, efficient responses suitable for testing environments
+- **Implementation**: Added "CUSTOMER SCENARIO" context to each agent's instruction set
+
+### Oneshot Mode Configuration
+- **Applied to**: `workflow/DeepResearchAgent.fdl`
+- **Purpose**: Bypasses detailed planning phases for direct task execution
+- **Impact**: Streamlines workflow by skipping `GatherFacts` and `Plan` states
+- **Implementation**: 
+  - Changed `startstate` from `GatherFacts` to `ProcessProgress`
+  - Simplified transition logic to go directly to task execution
+  - Removed complex planning loops for faster completion
+
+### Technical Configuration
+- **MCP Tools**: Not applicable (feature not present in this template)
+- **A2A (Agent-to-Agent)**: Not applicable (feature not present in this template)
+- **Primary Color (#3b82f6)**: Not applicable (backend-only template with no UI components)
+- **Brand Theme**: Not applicable (no visual elements to customize)
+
+### Template Type
+This is a pure Azure AI Agent Service configuration consisting of:
+- `.agent` files defining individual agent behaviors
+- `.fdl` workflow definition for agent orchestration
+- No frontend UI components requiring visual customization
+
+---
+
 ## 🛠 Customization Tips
 
 - **Add Custom Tools**: Plug in web search or vector DB search to complement file-based knowledge.
