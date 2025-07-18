@@ -1,9 +1,9 @@
 # AI Foundry Definition Language
-name: deepresearch
+name: qualcomm-deepresearch
 states:
   - name: GatherFacts
     actors:
-      - agent: LedgerFacts
+      - agent: QualcommLedgerFacts
         inputs:
           instructions: instructions
         outputs:
@@ -15,7 +15,7 @@ states:
     isFinal: false
   - name: Plan
     actors:
-      - agent: LedgerPlanner
+      - agent: QualcommLedgerPlanner
         inputs:
           task: task
           facts: facts
@@ -28,7 +28,7 @@ states:
     isFinal: false
   - name: ProcessProgress
     actors:
-      - agent: ProgressLedger
+      - agent: QualcommProgressLedger
         inputs:
           task: task
           team: team
@@ -42,7 +42,7 @@ states:
     isFinal: false
   - name: actionRouter
     actors:
-      - agent: ActionRouterAgent
+      - agent: QualcommActionRouterAgent
         messagesIn:
           - nextStepMessages
         inputs:
@@ -60,7 +60,7 @@ states:
         streamOutput: true
   - name: UpdateLedgerFact
     actors:
-      - agent: LedgerFactsUpdate
+      - agent: QualcommLedgerFactsUpdate
         thread: Run
         inputs:
           task: task
@@ -72,7 +72,7 @@ states:
     isFinal: false
   - name: LedgerPlanUpdate
     actors:
-      - agent: LedgerPlanUpdate
+      - agent: QualcommLedgerPlanUpdate
         inputs:
           task: task
           facts: facts
@@ -84,7 +84,7 @@ states:
     isFinal: false
   - name: Summarizer
     actors:
-      - agent: FinalStepAgent
+      - agent: QualcommFinalStepAgent
         thread: Run
         inputs:
           task: task
@@ -102,13 +102,13 @@ transitions:
     to: actionRouter
   - from: actionRouter
     to: UpdateLedgerFact
-    condition: nextAgent.Equals(LedgerFactsUpdate)
+    condition: nextAgent.Equals(QualcommLedgerFactsUpdate)
   - from: actionRouter
     to: Summarizer
-    condition: nextAgent.Equals(FinalStepAgent)
+    condition: nextAgent.Equals(QualcommFinalStepAgent)
   - from: actionRouter
     to: dynamicStepAgent
-    condition: nextAgent.NotContains(FinalStepAgent)
+    condition: nextAgent.NotContains(QualcommFinalStepAgent)
   - from: dynamicStepAgent
     to: ProcessProgress
   - from: UpdateLedgerFact
@@ -137,9 +137,9 @@ variables:
   - Type: userDefined
     name: systemAgents
     value:
-      - agent: FinalStepAgent
-        description: Agent which summarizes the output after task is complete. When next speaker is none.
-      - agent: LedgerFactsUpdate
-        description: Agent which can update the plan if we are looping without making progress or stall is detected.
+      - agent: QualcommFinalStepAgent
+        description: Qualcomm semiconductor research summarizer that provides SemiAnalysis-style technical analysis and strategic insights.
+      - agent: QualcommLedgerFactsUpdate
+        description: Qualcomm semiconductor intelligence updating agent that enhances research with new technical specifications and competitive insights.
 startstate: GatherFacts
 id: wf_agent_tcqz3LaQfcH8YkVLMCBIwrCE
