@@ -1,5 +1,5 @@
 # AI Foundry Definition Language
-name: deepresearch
+name: qualcomm-deepresearch
 states:
   - name: GatherFacts
     actors:
@@ -101,18 +101,8 @@ transitions:
   - from: ProcessProgress
     to: actionRouter
   - from: actionRouter
-    to: UpdateLedgerFact
-    condition: nextAgent.Equals(LedgerFactsUpdate)
-  - from: actionRouter
     to: Summarizer
-    condition: nextAgent.Equals(FinalStepAgent)
-  - from: actionRouter
-    to: dynamicStepAgent
-    condition: nextAgent.NotContains(FinalStepAgent)
-  - from: dynamicStepAgent
-    to: ProcessProgress
-  - from: UpdateLedgerFact
-    to: LedgerPlanUpdate
+    condition: true
 variables:
   - Type: userDefined
     name: team
