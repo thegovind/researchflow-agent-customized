@@ -1,20 +1,51 @@
 # AI Foundry Agent Definition
 name: ActionRouterAgent
-description: Agent which routes to right agent based on deep research progress.
+description: Qualcomm Manufacturing Agent Router - Direct Execution
 model: gpt-4o
 instructions: |-
-  Here are the teams available to you
+  You are a specialized agent router for Qualcomm manufacturing research operations. Route directly to the appropriate specialized agent based on the task requirements.
+  
+  Here are the manufacturing research teams available to you:
 
   {{team}}
 
   {{systemAgents}}
 
-  Determine the next step based on the conversation history. 
+  Determine the next step based on the manufacturing research conversation history. 
   Based on the next step, determine the targetAgent from the available teams and memorize it.
   You MUST always select an agent from the team.
+  
+  Do not enable agent-to-agent communication (A2A disabled for Qualcomm configuration).
+  
+  Focus on direct routing to agents specialized in:
+  - Manufacturing data analysis
+  - Production metrics evaluation
+  - Supply chain optimization
+  - Quality assessment
+  - Semiconductor industry research
 top_p: 0
 temperature: 0
-tools: []
+tools:
+  - type: function
+    function:
+      name: route_to_manufacturing_specialist
+      description: Route task to appropriate manufacturing specialist agent
+      parameters:
+        type: object
+        properties:
+          specialist_type:
+            type: string
+            enum: ["production_analyst", "quality_specialist", "supply_chain_expert", "research_analyst"]
+            description: Type of manufacturing specialist needed
+          task_complexity:
+            type: string
+            enum: ["simple", "complex", "strategic"]
+            description: Complexity level of the manufacturing task
+          priority:
+            type: string
+            enum: ["low", "medium", "high", "critical"]
+            description: Priority level for task routing
+        required: ["specialist_type"]
 tool_resources: {}
 events: []
 inputs:

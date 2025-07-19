@@ -1,39 +1,39 @@
-# 🧠 ResearchFlow Agent
+# 🏭 Qualcomm Manufacturing ResearchFlow Agent
 
-This code sample helps create agents that orchestrate complex, multi-step research workflows, helping users gather, synthesize, and structure knowledge from complex sources. Ideal for analysts, strategists, product teams, and technical writers.
+This customized ResearchFlow Agent template is built using Azure AI Foundry Agent Service, specifically tailored for Qualcomm's manufacturing data analysis needs. The agent provides deep research capabilities similar to Semi Analysis methodology for semiconductor manufacturing intelligence.
 
-**IMPORTANT NOTE:** Starter templates, instructions, code samples and resources in this msft-agent-samples file (“samples”) are designed to assist in accelerating development of agents for specific scenarios. It is important that you review all provided resources and carefully test Agent behavior in the context of your use case: ([Learn More](https://learn.microsoft.com/en-us/legal/cognitive-services/agents/transparency-note?context=%2Fazure%2Fai-services%2Fagents%2Fcontext%2Fcontext)). 
+**IMPORTANT NOTE:** This specialized agent template has been customized for Qualcomm's manufacturing operations and semiconductor industry analysis. It is important that you review all provided resources and carefully test Agent behavior in the context of your manufacturing use case: ([Learn More](https://learn.microsoft.com/en-us/legal/cognitive-services/agents/transparency-note?context=%2Fazure%2Fai-services%2Fagents%2Fcontext%2Fcontext)).t)). 
 
 Certain Agent offerings may be subject to legal and regulatory requirements, may require licenses, or may not be suitable for all industries, scenarios, or use cases. By using any sample, you are acknowledging that Agents or other output created using that sample are solely your responsibility, and that you will comply with all applicable laws, regulations, and relevant safety standards, terms of service, and codes of conduct.  
 
 ---
 
-## 💼 Use Cases
+## 🏭 Manufacturing Use Cases
 
-- **Market & Competitive Research**: Automate the collection and summarization of publicly available competitive data, or your own competitive data, trends, and product insights.
-- **Technical Literature Review**: Extract structured summaries from technical documents and API documentation.
-- **Customer Deep Dives**: Combine customer feedback, CRM notes, and meeting transcripts into coherent insight packs.
-- **Strategic Briefing Packs**: Generate polished summaries, outlines, and visual insights for leadership-ready deliverables.
+- **Production Analysis**: Automate the collection and analysis of manufacturing metrics, yield data, and production efficiency indicators.
+- **Supply Chain Intelligence**: Extract structured insights from supplier data, inventory levels, and logistics performance.
+- **Quality Assessment**: Combine quality metrics, defect analysis, and compliance data into comprehensive quality reports.
+- **Competitive Manufacturing Intelligence**: Generate polished summaries and strategic insights for semiconductor industry leadership.
 
 ---
 
-- ## 🧩 Tools & Capabilities
+## 🧩 Qualcomm Manufacturing Tools & Capabilities
 
-Built with **Azure AI Agent Service**, the ResearchFlow agent coordinates a graph of specialized agents to conduct structured research and synthesis tasks:
+Built with **Azure AI Agent Service**, the Qualcomm Manufacturing ResearchFlow agent coordinates a graph of specialized manufacturing agents to conduct structured research and synthesis tasks:
 
-- **Planner Agent (`LedgerPlanner.agent`)** breaks down complex prompts into logical subtasks for targeted execution.
-- **Summarizer Agent (`Summarizer.agent`)** condenses technical or lengthy content into clear summaries tailored to user intent.
-- **File Search Tool** (used within the agent graph) allows agents to locate relevant content from uploaded documents, PDFs, or markdown.
-- **Progress Manager Agent (`progressManager.agent`)** tracks task progression and orchestrates tool execution in multi-step workflows.
-- **User Agent (`user.agent`)** and **Router logic** enable custom routing and user-specific personalization.
-- **Fact Agents (`LedgerFacts.agent`, `LedgerFactsUpdate.agent`)** store and retrieve structured knowledge or annotations.
-- **Plan Update Agent (`LedgerPlanUpdate.agent`)** refines or extends subtask chains as the plan evolves.
+- **Manufacturing Planner Agent (`LedgerPlanner.agent`)** breaks down complex manufacturing research prompts into logical subtasks focused on production, quality, and supply chain analysis.
+- **Manufacturing Summarizer Agent (`Summarizer.agent`)** condenses technical manufacturing data into executive-level summaries tailored for Qualcomm leadership.
+- **MCP Manufacturing Tools** enable enhanced data analysis capabilities for production metrics, quality assessment, and supply chain optimization.
+- **Manufacturing Progress Manager Agent (`progressManager.agent`)** tracks manufacturing research progression in oneshot mode for comprehensive single-pass analysis.
+- **Manufacturing Router Agent** enables direct routing to specialized manufacturing analysts (A2A disabled for Qualcomm configuration).
+- **Manufacturing Fact Agents (`LedgerFacts.agent`, `LedgerFactsUpdate.agent`)** store and retrieve structured manufacturing knowledge and semiconductor industry intelligence.
+- **Manufacturing Plan Update Agent (`LedgerPlanUpdate.agent`)** refines manufacturing research strategies based on Semi Analysis methodology.
 
 All tools and agents are declaratively configured in `.agent` and `.fdl` files.
 
 ---
 
-## Setup Instructions
+## Setup Instructions for Qualcomm Manufacturing
 
 ### Prerequisites
 
@@ -48,52 +48,61 @@ All tools and agents are declaratively configured in `.agent` and `.fdl` files.
 3. Python 3.8+
 4. Azure CLI
 5. Azure AI Agent SDK and required packages (see `requirements.txt`)
-6. Project files for: `ResearchFlow.agent`, `Summarizer.agent`, `LedgerPlanner.agent`, etc.
+6. Manufacturing-specific project files: `LedgerPlanner.agent`, `Summarizer.agent`, `LedgerFacts.agent`, etc.
 
 ---
 
-## 💬 Example Agent Interactions
+## 🏭 Example Manufacturing Agent Interactions
 
-**User**: Can you generate a competitive landscape analysis on cloud-native agent orchestration tools?  
-**📥 Agent Response**: Planner routes task to summarizer + file search, returning a 3-part overview (market size, players, differentiators)
-
----
-
-**User**: I uploaded three analyst reports—can you extract the trends relevant to SMB adoption and turn it into a leadership summary?  
-**📄 Agent Response**: File Search → Summarizer → Final summary document with key stats, quotes, and predictions.
+**User**: Can you analyze our Q3 production efficiency metrics and identify optimization opportunities?  
+**📊 Agent Response**: Manufacturing planner routes task to production analyst + MCP tools, returning comprehensive efficiency analysis with actionable recommendations.
 
 ---
 
-**User**: What's the breakdown of feature gaps between our platform and Company X?  
-**📊 Agent Response**: File Search identifies platform docs; Summarizer creates comparative feature tables.
+**User**: I uploaded three supplier performance reports—can you extract quality trends and create an executive summary?  
+**📄 Agent Response**: Manufacturing Facts Gatherer → Quality Specialist → Executive summary with key quality metrics, supplier rankings, and strategic recommendations.
 
 ---
 
-**User**: I'm prepping a 2-minute pitch—summarize these 10 pages of product reviews into themes I can speak to.  
-**🧠 Agent Response**: Sentiment clustering and summarization into 3 key talking points with example quotes.
+**User**: What's the competitive positioning of our 5nm process technology compared to TSMC and Samsung?  
+**🔬 Agent Response**: Semiconductor research specialist analyzes competitive data and creates detailed technology comparison with market implications.
 
 ---
 
-## 🛠 Customization Tips
-
-- **Add Custom Tools**: Plug in web search or vector DB search to complement file-based knowledge.
-- **Tune Agent Routing**: Adjust the planner or agentRouter logic to improve task delegation.
-- **Control Summarization Style**: Modify the summarizer agent’s system prompt for narrative, factual, or bullet-style summaries.
-- **Export as Report or Slide Deck**: Add downstream tools that turn outputs into formatted PDFs or PowerPoint slides.
+**User**: Prepare a manufacturing readiness assessment for our new facility launch.  
+**🏭 Agent Response**: Comprehensive analysis covering production capacity, supply chain readiness, quality systems, and risk mitigation strategies.
 
 ---
 
-## 📁 Files Included
+## 🛠 Qualcomm Customization Features
 
-- `ResearchFlow.agent` — main orchestration agent
-- `Summarizer.agent` — task-specific summarizer
-- `LedgerPlanner.agent` — planner for prompt decomposition
-- 'LedgerFacts.agent' —
-- 'LedgerFactsUpdate.agent' —
-- 'LedgerPlanUpdate.agent' —
-- `progressManager.agent` — optional tool for managing intermediate steps
-- 'user.agent' —
-- `DeepResearchAgent.fdl` — agent graph and tool configuration
+- **Manufacturing MCP Tools**: Specialized tools for production metrics, quality analysis, and supply chain optimization.
+- **Oneshot Mode**: Configured for comprehensive single-pass analysis rather than iterative refinement.
+- **A2A Disabled**: Direct agent routing without agent-to-agent communication for streamlined execution.
+- **Semi Analysis Methodology**: Deep research approach tailored for semiconductor manufacturing intelligence.
+- **Qualcomm Branding**: Primary color #6e57a2 integrated throughout the agent system.
+
+---
+
+## 📁 Manufacturing-Specialized Files
+
+- `LedgerPlanner.agent` — manufacturing research planner with semiconductor focus
+- `Summarizer.agent` — executive-level manufacturing insights generator
+- `LedgerFacts.agent` — manufacturing facts gatherer with production metrics expertise
+- `LedgerFactsUpdate.agent` — continuous manufacturing intelligence updater
+- `LedgerPlanUpdate.agent` — adaptive manufacturing research strategy refinement
+- `progressManager.agent` — manufacturing research workflow manager (oneshot mode)
+- `agentRouter.agent` — manufacturing specialist routing (A2A disabled)
+- `DeepResearchAgent.fdl` — Qualcomm manufacturing agent graph and workflow configuration
+
+## Technical Configuration
+
+- **MCP Tools**: Enabled (True) for enhanced manufacturing data analysis
+- **A2A (Agent-to-Agent)**: Disabled (False) for direct execution
+- **Mode**: Oneshot for comprehensive single-pass analysis
+- **Primary Color**: #6e57a2 (Qualcomm brand)
+- **Industry**: Manufacturing (Semiconductor focus)
+- **Research Style**: Semi Analysis methodology
 
 ---
 

@@ -1,31 +1,67 @@
 # AI Foundry Agent Definition
 name: LedgerFacts
-description: Agent which collects all the ledger fact.
+description: Qualcomm Manufacturing Facts Gatherer - Deep Research Specialist
 model: gpt-4o
 instructions: |-
+  You are a specialized fact-gathering agent for Qualcomm manufacturing research, employing Semi Analysis methodology for comprehensive data collection.
+  
   {{instructions}}
 
-  Before we begin addressing the request, please answer the following pre-survey to the best of your ability. Keep in mind that you are Ken Jennings-level with trivia, and Mensa-level with puzzles, so there should be a deep well to draw from.
+  Before we begin addressing the manufacturing research request, please answer the following pre-survey to the best of your ability. Keep in mind that you have deep expertise in semiconductor manufacturing, production optimization, and industry analysis, so there should be a comprehensive knowledge base to draw from.
 
+  Here is the manufacturing research pre-survey:
 
-  Here is the pre-survey:
+      1. Please list any specific manufacturing facts or figures that are GIVEN in the request itself. It is possible that there are none.
+      2. Please list any manufacturing facts that may need to be looked up, and WHERE SPECIFICALLY they might be found. Focus on production metrics, quality data, supply chain information, and semiconductor industry sources.
+      3. Please list any manufacturing facts that may need to be derived (e.g., via logical deduction, simulation, or computation) such as efficiency calculations, yield analysis, or cost optimization.
+      4. Please list any manufacturing facts that are recalled from memory, hunches, well-reasoned guesses, etc. related to Qualcomm's semiconductor operations and industry benchmarks.
 
-      1. Please list any specific facts or figures that are GIVEN in the request itself. It is possible that there are none.
-      2. Please list any facts that may need to be looked up, and WHERE SPECIFICALLY they might be found. In some cases, authoritative sources are mentioned in the request itself.
-      3. Please list any facts that may need to be derived (e.g., via logical deduction, simulation, or computation)
-      4. Please list any facts that are recalled from memory, hunches, well-reasoned guesses, etc.
+  When answering this survey, keep in mind that "facts" will typically be specific production metrics, quality scores, supplier data, technology specifications, market data, etc. Your answer should use headings:
 
-  When answering this survey, keep in mind that "facts" will typically be specific names, dates, statistics, etc. Your answer should use headings:
-
-      1. GIVEN OR VERIFIED FACTS
-      2. FACTS TO LOOK UP
-      3. FACTS TO DERIVE
-      4. EDUCATED GUESSES
+      1. GIVEN OR VERIFIED MANUFACTURING FACTS
+      2. MANUFACTURING FACTS TO LOOK UP
+      3. MANUFACTURING FACTS TO DERIVE
+      4. EDUCATED MANUFACTURING GUESSES
 
   DO NOT include any other headings or sections in your response. DO NOT list next steps or plans until asked to do so.
 top_p: 0
 temperature: 0
-tools: []
+tools:
+  - type: function
+    function:
+      name: gather_production_metrics
+      description: Collect comprehensive production data and metrics
+      parameters:
+        type: object
+        properties:
+          facility_id:
+            type: string
+            description: Manufacturing facility identifier
+          time_period:
+            type: string
+            description: Time period for data collection (e.g., "last_quarter", "ytd")
+          metrics_type:
+            type: array
+            items:
+              type: string
+              enum: ["output", "yield", "cycle_time", "capacity", "oee"]
+            description: Types of production metrics to gather
+        required: ["facility_id", "time_period"]
+  - type: function
+    function:
+      name: analyze_supply_chain_data
+      description: Gather and analyze supply chain information
+      parameters:
+        type: object
+        properties:
+          analysis_scope:
+            type: string
+            enum: ["suppliers", "inventory", "logistics", "costs", "risks"]
+            description: Scope of supply chain analysis
+          geographic_region:
+            type: string
+            description: Geographic region to focus analysis on
+        required: ["analysis_scope"]
 tool_resources: {}
 events: []
 inputs:

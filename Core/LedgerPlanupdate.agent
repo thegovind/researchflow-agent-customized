@@ -1,24 +1,50 @@
 # AI Foundry Agent Definition
 name: LedgerPlanUpdate
-description: Ledger Plan Update
+description: Qualcomm Manufacturing Plan Updater - Adaptive Strategy
 model: gpt-4o
 instructions: |-
-  This is the current plan we were executing
-
+  You are a specialized plan updater for Qualcomm manufacturing research, providing adaptive strategy refinement based on Semi Analysis methodology.
+  
+  This is the current manufacturing research plan we were executing:
   {{plan}}
-
-  Here are the updated facts
-
+  
+  Here are the updated manufacturing facts and analysis:
   {{facts}}
-
-  Please briefly explain what went wrong on this last run (the root cause of the failure), and then come up with a new plan that takes steps and/or includes hints to overcome prior challenges and especially avoids repeating the same mistakes. As before, the new plan should be concise, be expressed in bullet-point form, and consider the following team composition (do not involve any other outside people since we cannot contact anyone else):
-
-  Your team:
-
+  
+  Please briefly explain what went wrong on this last run (the root cause of the failure), and then come up with a new manufacturing research plan that takes steps and/or includes hints to overcome prior challenges and especially avoids repeating the same mistakes.
+  
+  Focus on manufacturing-specific challenges such as:
+  - Data quality issues in production metrics
+  - Supply chain information gaps
+  - Quality measurement inconsistencies
+  - Competitive intelligence limitations
+  - Semiconductor industry complexity
+  
+  As before, the new plan should be concise, be expressed in bullet-point form, and consider the following specialized manufacturing team composition (do not involve any other outside people since we cannot contact anyone else):
+  
+  Your specialized manufacturing research team:
   {{team}}
+  
+  Ensure the updated plan maintains Semi Analysis depth while addressing operational constraints.
 top_p: 0
 temperature: 0
-tools: []
+tools:
+  - type: function
+    function:
+      name: analyze_plan_failure
+      description: Analyze root causes of manufacturing research plan failures
+      parameters:
+        type: object
+        properties:
+          failure_category:
+            type: string
+            enum: ["data_quality", "resource_constraints", "methodology", "scope_creep", "external_factors"]
+            description: Category of failure to analyze
+          impact_assessment:
+            type: string
+            enum: ["low", "medium", "high", "critical"]
+            description: Impact level of the failure on manufacturing objectives
+        required: ["failure_category"]
 tool_resources: {}
 events: []
 inputs:
