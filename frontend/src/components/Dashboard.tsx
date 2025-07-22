@@ -17,7 +17,7 @@ const Dashboard: React.FC = () => {
   const [results, setResults] = useState<AnalysisResult[]>([])
   const [currentQuery, setCurrentQuery] = useState('')
 
-  const handleResearchSubmit = async (query: string, analysisType: string) => {
+  const handleResearchSubmit = async (query: string, _analysisType: string) => {
     setIsLoading(true)
     setCurrentQuery(query)
 
