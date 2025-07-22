@@ -1,100 +1,134 @@
-# 🧠 ResearchFlow Agent
+# 🧠 Lumen ResearchFlow Agent
 
-This code sample helps create agents that orchestrate complex, multi-step research workflows, helping users gather, synthesize, and structure knowledge from complex sources. Ideal for analysts, strategists, product teams, and technical writers.
+This customized ResearchFlow Agent is specifically tailored for **Lumen Technology** channel partners, providing AI-powered analysis of Lumen products, market opportunities, and competitive positioning in the telecommunications and enterprise networking industry.
 
-**IMPORTANT NOTE:** Starter templates, instructions, code samples and resources in this msft-agent-samples file (“samples”) are designed to assist in accelerating development of agents for specific scenarios. It is important that you review all provided resources and carefully test Agent behavior in the context of your use case: ([Learn More](https://learn.microsoft.com/en-us/legal/cognitive-services/agents/transparency-note?context=%2Fazure%2Fai-services%2Fagents%2Fcontext%2Fcontext)). 
-
-Certain Agent offerings may be subject to legal and regulatory requirements, may require licenses, or may not be suitable for all industries, scenarios, or use cases. By using any sample, you are acknowledging that Agents or other output created using that sample are solely your responsibility, and that you will comply with all applicable laws, regulations, and relevant safety standards, terms of service, and codes of conduct.  
+**IMPORTANT NOTE:** This customized template has been configured for Lumen Technology's specific use case in data analysis for channel partners. The agent orchestrates complex research workflows to help channel partners gather, synthesize, and structure knowledge about Lumen's technology solutions and market opportunities.
 
 ---
 
-## 💼 Use Cases
+## 💼 Lumen-Specific Use Cases
 
-- **Market & Competitive Research**: Automate the collection and summarization of publicly available competitive data, or your own competitive data, trends, and product insights.
-- **Technical Literature Review**: Extract structured summaries from technical documents and API documentation.
-- **Customer Deep Dives**: Combine customer feedback, CRM notes, and meeting transcripts into coherent insight packs.
-- **Strategic Briefing Packs**: Generate polished summaries, outlines, and visual insights for leadership-ready deliverables.
-
----
-
-- ## 🧩 Tools & Capabilities
-
-Built with **Azure AI Agent Service**, the ResearchFlow agent coordinates a graph of specialized agents to conduct structured research and synthesis tasks:
-
-- **Planner Agent (`LedgerPlanner.agent`)** breaks down complex prompts into logical subtasks for targeted execution.
-- **Summarizer Agent (`Summarizer.agent`)** condenses technical or lengthy content into clear summaries tailored to user intent.
-- **File Search Tool** (used within the agent graph) allows agents to locate relevant content from uploaded documents, PDFs, or markdown.
-- **Progress Manager Agent (`progressManager.agent`)** tracks task progression and orchestrates tool execution in multi-step workflows.
-- **User Agent (`user.agent`)** and **Router logic** enable custom routing and user-specific personalization.
-- **Fact Agents (`LedgerFacts.agent`, `LedgerFactsUpdate.agent`)** store and retrieve structured knowledge or annotations.
-- **Plan Update Agent (`LedgerPlanUpdate.agent`)** refines or extends subtask chains as the plan evolves.
-
-All tools and agents are declaratively configured in `.agent` and `.fdl` files.
+- **Lumen Product Analysis**: Deep-dive analysis of Lumen's fiber network infrastructure, cloud connectivity solutions, and enterprise services
+- **Market Opportunity Research**: Identify growth opportunities for Lumen channel partners in enterprise networking and telecommunications
+- **Competitive Intelligence**: Analyze Lumen's competitive positioning against other telecommunications and networking providers
+- **Technology Trend Analysis**: Research emerging trends in 5G, edge computing, and enterprise networking that impact Lumen's market position
+- **Channel Partner Strategy**: Generate strategic insights and recommendations for Lumen channel partner business development
 
 ---
 
-## Setup Instructions
+## 🎨 Lumen Technology Branding
+
+This customized version features:
+- **Primary Color**: #3b82f6 (Lumen Technology blue)
+- **Brand Theme**: Lumen Technology colors and styling throughout the interface
+- **Channel Partner Focus**: UI and messaging tailored for Lumen channel partner workflows
+- **Professional Dashboard**: Semi Analysis-like experience for data analysis and insights
+
+---
+
+## 🧩 Customized Tools & Capabilities
+
+Built with **Azure AI Agent Service**, this Lumen-customized ResearchFlow agent coordinates specialized agents for telecommunications and enterprise technology analysis:
+
+- **Lumen Facts Agent (`LedgerFacts.agent`)** - Specialized in gathering Lumen product data, market position, and industry context
+- **Strategic Planner Agent (`LedgerPlanner.agent`)** - Creates analysis plans focused on Lumen channel partner business development
+- **Business Summarizer Agent (`Summarizer.agent`)** - Generates executive-ready reports for channel partner decision-makers
+- **Progress Manager Agent (`progressManager.agent`)** - Orchestrates analysis workflow with focus on Lumen-specific insights
+- **Router Agent (`agentRouter.agent`)** - Intelligent routing optimized for telecommunications industry analysis
+
+All agents are configured with Lumen Technology domain expertise and channel partner focus.
+
+---
+
+## 🚀 Frontend Experience
+
+### Channel Partner Dashboard
+- **Research Query Interface**: Submit analysis requests about Lumen products and market opportunities
+- **Real-time Analysis**: Watch as the ResearchFlow Agent processes your queries
+- **Executive Summaries**: Receive business-ready insights and recommendations
+- **Export Capabilities**: Download reports for internal use and client presentations
+
+### Key Features
+- Lumen Technology branding throughout the interface
+- Specialized analysis types (Market Analysis, Competitive Research, Product Insights, etc.)
+- Professional dashboard design optimized for channel partner workflows
+- Responsive design for desktop and mobile access
+
+---
+
+## 🛠 Technical Configuration
+
+### Customized Settings
+- **MCP Tools**: Disabled (as requested)
+- **A2A (Agent-to-Agent)**: Disabled (as requested)  
+- **Mode**: Oneshot (complete analysis in single execution)
+- **Industry Focus**: Technology/Telecommunications
+- **Target Users**: Lumen channel partners
+
+### Technology Stack
+- **Frontend**: React 19 + TypeScript + Vite + Tailwind CSS
+- **Backend**: Azure AI Agent Service with custom workflow
+- **Styling**: Lumen Technology brand colors and design system
+- **Deployment**: Optimized for cloud deployment with environment configuration
+
+---
+
+## 📁 Customized Files
+
+### Frontend Application
+- `frontend/` - Complete React application with Lumen branding
+- `frontend/src/components/` - Lumen-branded UI components
+- `frontend/tailwind.config.js` - Lumen color scheme configuration
+
+### Customized Agents
+- `Core/LedgerFacts.agent` - Lumen-focused fact gathering
+- `Core/LedgerPlanner.agent` - Channel partner strategic planning
+- `Core/Summarizer.agent` - Executive summary generation
+- `workflow/DeepResearchAgent.fdl` - Lumen-optimized workflow
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
+1. Azure subscription with AI services configured
+2. Node.js 18+ for frontend development
+3. Azure AI Agent Service setup
 
-1. Azure subscription with the following permissions
-   - Contributor or Cognitive Services Contributor role (for resource deployment)
-   - Azure AI Developer and Cognitive Services user role (for agent creation)
-2. Agent setup: deploy the latest agent setup using this ([custom deployment](https://www.aka.ms/basic-agent-deployment)).
-   - The above creates:
-      - AI Services resource
-      - AI Project
-      - Model deployment
-3. Python 3.8+
-4. Azure CLI
-5. Azure AI Agent SDK and required packages (see `requirements.txt`)
-6. Project files for: `ResearchFlow.agent`, `Summarizer.agent`, `LedgerPlanner.agent`, etc.
+### Frontend Development
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
----
-
-## 💬 Example Agent Interactions
-
-**User**: Can you generate a competitive landscape analysis on cloud-native agent orchestration tools?  
-**📥 Agent Response**: Planner routes task to summarizer + file search, returning a 3-part overview (market size, players, differentiators)
+### Deployment
+The application is configured for deployment with Lumen-specific environment variables and Azure AI service integration.
 
 ---
 
-**User**: I uploaded three analyst reports—can you extract the trends relevant to SMB adoption and turn it into a leadership summary?  
-**📄 Agent Response**: File Search → Summarizer → Final summary document with key stats, quotes, and predictions.
+## 💬 Example Channel Partner Interactions
+
+**Channel Partner**: "Analyze Lumen's fiber network competitive advantages for enterprise customers"  
+**📊 Agent Response**: Comprehensive analysis of Lumen's fiber infrastructure, competitive positioning, and enterprise market opportunities with actionable recommendations.
 
 ---
 
-**User**: What's the breakdown of feature gaps between our platform and Company X?  
-**📊 Agent Response**: File Search identifies platform docs; Summarizer creates comparative feature tables.
+**Channel Partner**: "Research edge computing market opportunities for Lumen partners"  
+**🚀 Agent Response**: Market analysis covering edge computing trends, Lumen's capabilities, and specific business development strategies for channel partners.
 
 ---
 
-**User**: I'm prepping a 2-minute pitch—summarize these 10 pages of product reviews into themes I can speak to.  
-**🧠 Agent Response**: Sentiment clustering and summarization into 3 key talking points with example quotes.
+## 📈 Customization for Lumen Technology
+
+This template has been specifically customized for:
+- **Company**: Lumen Technology
+- **Industry**: Technology/Telecommunications  
+- **Primary Use Case**: Data analysis for channel partners
+- **Brand Theme**: Lumen Technology colors (#3b82f6 primary)
+- **Target Scenario**: Semi Analysis-like experience for Lumen product analysis
 
 ---
 
-## 🛠 Customization Tips
-
-- **Add Custom Tools**: Plug in web search or vector DB search to complement file-based knowledge.
-- **Tune Agent Routing**: Adjust the planner or agentRouter logic to improve task delegation.
-- **Control Summarization Style**: Modify the summarizer agent’s system prompt for narrative, factual, or bullet-style summaries.
-- **Export as Report or Slide Deck**: Add downstream tools that turn outputs into formatted PDFs or PowerPoint slides.
-
----
-
-## 📁 Files Included
-
-- `ResearchFlow.agent` — main orchestration agent
-- `Summarizer.agent` — task-specific summarizer
-- `LedgerPlanner.agent` — planner for prompt decomposition
-- 'LedgerFacts.agent' —
-- 'LedgerFactsUpdate.agent' —
-- 'LedgerPlanUpdate.agent' —
-- `progressManager.agent` — optional tool for managing intermediate steps
-- 'user.agent' —
-- `DeepResearchAgent.fdl` — agent graph and tool configuration
-
----
-
-
+*Customized by Devin AI for @thegovind*  
+*Devin Run: https://app.devin.ai/sessions/842d3bf9b87848189b6fda78c51e93b7*
