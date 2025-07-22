@@ -1,5 +1,5 @@
 # AI Foundry Definition Language
-name: deepresearch
+name: lumen-research-flow
 states:
   - name: GatherFacts
     actors:
@@ -118,6 +118,7 @@ variables:
     name: team
   - Type: userDefined
     name: instructions
+    value: "Focus on Lumen Technology products, services, and market opportunities for channel partners in the telecommunications and enterprise networking industry."
   - Type: userDefined
     name: task
   - Type: userDefined
@@ -138,8 +139,17 @@ variables:
     name: systemAgents
     value:
       - agent: FinalStepAgent
-        description: Agent which summarizes the output after task is complete. When next speaker is none.
+        description: Agent which creates executive summaries for Lumen channel partners after analysis is complete.
       - agent: LedgerFactsUpdate
-        description: Agent which can update the plan if we are looping without making progress or stall is detected.
+        description: Agent which updates analysis focus if progress stalls, ensuring Lumen-specific insights are captured.
+  - Type: userDefined
+    name: useMCPTools
+    value: false
+  - Type: userDefined
+    name: useA2A
+    value: false
+  - Type: userDefined
+    name: mode
+    value: "oneshot"
 startstate: GatherFacts
 id: wf_agent_tcqz3LaQfcH8YkVLMCBIwrCE
