@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResearchFlow Agent - Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <h1>ResearchFlow Agent</h1>
+                </div>
+                <div class="header-actions">
+                    <button id="viewSessionsBtn" class="btn btn-secondary">
+                        <i class="fas fa-history"></i> View Sessions
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <div id="welcomeSection" class="section">
+                <div class="welcome-card">
+                    <h2>🔬 Advanced Research Agent System</h2>
+                    <p>Orchestrate complex, multi-step research workflows with AI agents that gather, synthesize, and structure knowledge from complex sources.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-search"></i>
+                            <h3>Smart Research</h3>
+                            <p>Automated collection and analysis of research data</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-sitemap"></i>
+                            <h3>Agent Orchestration</h3>
+                            <p>Coordinated workflow across specialized AI agents</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Real-time Progress</h3>
+                            <p>Live tracking of research workflow execution</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Form -->
+            <div id="researchForm" class="section">
+                <div class="form-card">
+                    <h2>Start New Research</h2>
+                    <form id="newResearchForm">
+                        <div class="form-group">
+                            <label for="researchTask">Research Task Description</label>
+                            <textarea 
+                                id="researchTask" 
+                                placeholder="Describe your research task... (e.g., 'Generate a competitive landscape analysis on cloud-native agent orchestration tools' or 'Analyze market trends in AI automation for SMB adoption')"
+                                rows="4"
+                                required
+                            ></textarea>
+                            <small class="form-hint">Be specific about what you want to research and any particular focus areas.</small>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-play"></i> Start Research
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Research Progress -->
+            <div id="researchProgress" class="section hidden">
+                <div class="progress-card">
+                    <div class="progress-header">
+                        <h2>Research in Progress</h2>
+                        <div class="progress-status">
+                            <span id="currentStatus" class="status-badge"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="research-details">
+                        <h3 id="currentTask"></h3>
+                        <div class="session-info">
+                            <span class="session-id">Session: <span id="sessionId"></span></span>
+                            <span class="session-time">Started: <span id="sessionTime"></span></span>
+                        </div>
+                    </div>
+
+                    <!-- Agent Workflow Visualization -->
+                    <div class="workflow-section">
+                        <h3>Agent Workflow</h3>
+                        <div id="agentWorkflow" class="agent-workflow"></div>
+                    </div>
+
+                    <!-- Progress Timeline -->
+                    <div class="timeline-section">
+                        <h3>Progress Timeline</h3>
+                        <div id="progressTimeline" class="timeline"></div>
+                    </div>
+
+                    <!-- Research Facts -->
+                    <div id="factsSection" class="facts-section hidden">
+                        <h3>Research Facts</h3>
+                        <div id="factsContent" class="facts-content"></div>
+                    </div>
+
+                    <!-- Research Plan -->
+                    <div id="planSection" class="plan-section hidden">
+                        <h3>Research Plan</h3>
+                        <div id="planContent" class="plan-content"></div>
+                    </div>
+
+                    <!-- Results -->
+                    <div id="resultsSection" class="results-section hidden">
+                        <h3>Research Results</h3>
+                        <div id="resultsContent" class="results-content"></div>
+                    </div>
+
+                    <div class="progress-actions">
+                        <button id="cancelResearch" class="btn btn-secondary">
+                            <i class="fas fa-stop"></i> Cancel
+                        </button>
+                        <button id="newResearchBtn" class="btn btn-primary hidden">
+                            <i class="fas fa-plus"></i> Start New Research
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sessions List -->
+            <div id="sessionsSection" class="section hidden">
+                <div class="sessions-card">
+                    <div class="sessions-header">
+                        <h2>Research Sessions</h2>
+                        <button id="backToMain" class="btn btn-secondary">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                    </div>
+                    <div id="sessionsList" class="sessions-list"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 ResearchFlow Agent. Built with Azure AI Agent Service.</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Starting research workflow...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
